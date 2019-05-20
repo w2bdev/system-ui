@@ -1,0 +1,29 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "prettier.disableLanguages": [],
+    "prettier.tslintIntegration": true,
+    "prettier.useTabs": false,
+    "prettier.tabWidth": 2,
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "es5",
+    "prettier.arrowParens": "avoid",
+    "vetur.format.defaultFormatter.html": "prettyhtml",
+    "vetur.format.defaultFormatterOptions": {
+      "prettier": {
+        // Prettier option here
+        "tslintIntegration": true,
+        "useTabs": false,
+        "tabWidth": 2,
+        "singleQuote": true,
+        "trailingComma": "es5",
+        "arrowParens": "avoid",
+        "semi": true
+      }
+    }
+  }
+}

@@ -15,13 +15,13 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue } from 'vue-property-decorator';
 
 @Component({})
 export default class extends Vue {
   private items: any = [
-    { title: "Add", icon: "mdi-plus-circle-outline" },
-    { title: "Filter", icon: "mdi-filter-outline" }
+    { title: 'Add', icon: 'mdi-plus-circle-outline' },
+    { title: 'Filter', icon: 'mdi-filter-outline' },
   ];
   private right: any = null;
 }
