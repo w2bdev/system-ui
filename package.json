@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@mdi/font": "^2.6.95",
+    "@types/lodash": "^4.14.129",
     "core-js": "^2.6.5",
+    "lodash": "^4.17.11",
     "register-service-worker": "^1.6.2",
     "roboto-fontface": "*",
     "vue": "^2.6.10",
@@ -19,7 +21,8 @@
     "vue-property-decorator": "^8.1.0",
     "vue-router": "^3.0.3",
     "vuetify": "^1.5.5",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "vuex-persistedstate": "^2.5.4"
   },
   "devDependencies": {
     "@types/jest": "^23.1.4",
