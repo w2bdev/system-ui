@@ -21,7 +21,11 @@ import { Component, Vue } from 'vue-property-decorator';
 
 @Component({})
 export default class extends Vue {
-  private items: any[] = [{ title: 'Setting' }, { title: 'Logout' }];
+  private translate: any;
+  private items: any[] = [
+    { title: this.translate('button.userSetting') },
+    { title: this.translate('button.logout') },
+  ];
 
   private clickAction() {
     //  Todo
@@ -30,6 +34,6 @@ export default class extends Vue {
 </script>
 <style lang="scss" scoped>
 .avatar {
-    cursor: pointer;
+  cursor: pointer;
 }
 </style>

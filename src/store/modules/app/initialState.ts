@@ -1,6 +1,4 @@
 import {IApp} from '@/interfaces';
+import { App } from '@/models';
 
-export const initialState: IApp = {
-  menu: true,
-  version: 0,
-};
+export const initialState: IApp = new App();

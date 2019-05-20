@@ -2,7 +2,7 @@
   <v-toolbar app flat clipped-left>
     <v-toolbar-side-icon v-if="$vuetify.breakpoint.mdAndDown" @click.stop="setMenu(!stateApp.menu)"></v-toolbar-side-icon>
     <v-toolbar-title class="headline text-uppercase">
-      <span>{-Code-}</span>
+      <span>{-{{$t('application.name')}}-}</span>
     </v-toolbar-title>
     <v-spacer></v-spacer>
     <!-- <v-btn icon>
