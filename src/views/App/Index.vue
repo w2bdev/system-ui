@@ -1,7 +1,7 @@
 <template>
-  <v-app>
+  <v-app dark>
     <Header />
-    <ActionDrawer />
+    <NavDrawer />
     <v-content>
       <router-view />
     </v-content>
@@ -11,12 +11,12 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import Header from '@/components/layout/Header.vue';
-import ActionDrawer from '@/components/layout/ActionDrawer.vue';
+import NavDrawer from '@/components/layout/NavDrawer.vue';
 
 @Component({
   components: {
     Header,
-    ActionDrawer,
+    NavDrawer,
   },
 })
 export default class extends Vue {

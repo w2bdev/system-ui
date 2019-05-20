@@ -3,6 +3,10 @@ import App from '@/views/App/Index.vue';
 const DashboardRoute = {
   path: 'dashboard',
   name: 'home',
+  meta: {
+    displayMenu: true,
+    icon: 'mdi-apps',
+  },
   component: () => import(/* webpackChunkName: "todo" */ '@/views/App/Dashboard.vue'),
 };
 const AppNotFound = {

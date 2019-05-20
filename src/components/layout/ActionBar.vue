@@ -22,7 +22,4 @@ import { Component, Vue } from 'vue-property-decorator';
 export default class extends Vue {}
 </script>
 <style lang="scss" scoped>
-.root {
-  border-bottom: 1px solid #f3f3f3;
-}
 </style>
