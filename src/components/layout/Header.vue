@@ -16,13 +16,19 @@
     <v-btn icon>
       <v-icon>mdi-apps</v-icon>
     </v-btn>
+    <UserMenu />
   </v-toolbar>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import UserMenu from '@/components/layout/UserMenu.vue';
 
-@Component({})
+@Component({
+  components: {
+    UserMenu,
+  },
+})
 export default class extends Vue {
   private drawer: boolean = true;
 }

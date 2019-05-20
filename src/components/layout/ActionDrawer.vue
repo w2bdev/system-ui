@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer app clipped>
+  <v-navigation-drawer app clipped width="250">
     <v-list dense class="pt-0">
       <v-list-tile v-for="item in items" :key="item.title">
         <v-list-tile-action>
