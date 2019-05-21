@@ -10,6 +10,7 @@ import { en as dashboardModuleEn, zh as dashboardModuleZh } from './modules/dash
 
 export default {
   en: {
+    name: 'English',
     application: AppEn,
     info: infoEn,
     error: errorEn,
@@ -23,6 +24,7 @@ export default {
     },
   },
   zh: {
+    name: '华语',
     application: AppZh,
     info: infoZh,
     error: errorZh,

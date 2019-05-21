@@ -1,8 +1,11 @@
 <template>
   <v-toolbar app flat clipped-left>
-    <v-toolbar-side-icon v-if="$vuetify.breakpoint.mdAndDown" @click.stop="setMenu(!stateApp.menu)"></v-toolbar-side-icon>
+    <v-toolbar-side-icon
+      v-if="$vuetify.breakpoint.mdAndDown"
+      @click.stop="setMenu(!stateApp.menu)"
+    ></v-toolbar-side-icon>
     <v-toolbar-title class="headline text-uppercase">
-      <span>{-{{$t('application.name')}}-}</span>
+      <span>{-{{ $t('application.name') }}-}</span>
     </v-toolbar-title>
     <v-spacer></v-spacer>
     <!-- <v-btn icon>
@@ -17,6 +20,7 @@
     <v-btn icon>
       <v-icon>mdi-apps</v-icon>
     </v-btn>
+    <LanguageButton :is-floating="true" />
     <UserMenu />
   </v-toolbar>
 </template>
@@ -26,11 +30,13 @@ import { Component, Vue } from 'vue-property-decorator';
 import { State, Action } from 'vuex-class';
 
 import UserMenu from '@/components/layout/UserMenu.vue';
+import LanguageButton from '@/components/button/LanguageButton.vue';
 import { IApp } from '@/interfaces';
 
 @Component({
   components: {
     UserMenu,
+    LanguageButton,
   },
 })
 export default class extends Vue {

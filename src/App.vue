@@ -5,10 +5,13 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import _ from 'lodash';
+import moment from 'moment';
 import { Action, State } from 'vuex-class';
 
 import { EventBus } from '@/utils/eventbus.ts';
 import config from '@/config';
+import { IMap } from './interfaces';
+import { MomentLocale } from '@/enums';
 
 @Component({})
 export default class extends Vue {
@@ -25,6 +28,7 @@ export default class extends Vue {
 
     if (language) {
       this.setLanguage(language).then((result: any) => {
+        moment.locale(MomentLocale[language]);
         this.$i18n.locale = language.toString();
         EventBus.$emit('update.locale', language);
       });

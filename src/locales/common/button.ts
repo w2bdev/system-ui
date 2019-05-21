@@ -11,6 +11,7 @@ const en = {
   download: 'Download',
   login: 'Login',
   logout: 'Logout',
+  forgotPassword: 'Forgot Password',
   search: 'Search',
   userSetting: 'User Setting',
 };
@@ -27,6 +28,7 @@ const zh = {
   download: '下载',
   login: '登录',
   logout: '登出',
+  forgotPassword: '忘记密码',
   search: '搜索',
   userSetting: '用户设置',
 };

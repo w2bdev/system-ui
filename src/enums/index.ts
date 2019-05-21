@@ -1,0 +1,1 @@
+export { MomentLocale } from './MomentLocale';
