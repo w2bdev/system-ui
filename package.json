@@ -16,6 +16,7 @@
     "lodash": "^4.17.11",
     "register-service-worker": "^1.6.2",
     "roboto-fontface": "*",
+    "vee-validate": "^2.2.7",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
     "vue-i18n": "^8.11.2",

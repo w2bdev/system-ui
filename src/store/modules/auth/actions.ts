@@ -6,16 +6,18 @@ import { LOGIN_SUCCESSFUL, LOGOUT, SET_AUTH_ACCOUNT } from './mutationTypes';
 import { IAuth, IRoot, ILoginCredential } from '@/interfaces';
 
 const actions: ActionTree<IAuth, IRoot> = {
-  // login({  }: ActionContext<IAuth, IRoot>, payload: ILoginCredential): void {
+  login({ commit }: ActionContext<IAuth, IRoot>, payload: ILoginCredential): boolean {
+    if (payload.username === 'system' && payload.password === 'password') {
+      commit(LOGIN_SUCCESSFUL, 'fake_token');
+      return true;
+    } else {
+      return false;
+    }
+  },
 
-  // },
-
-  // logout({ state }: ActionContext<IAuth, IRoot>): boolean {
-  //   if (state.token) {
-  //   }
-
-  //   return false;
-  // },
+  logout({ commit }: ActionContext<IAuth, IRoot>): void {
+    commit(LOGOUT);
+  },
 };
 
 export default actions;

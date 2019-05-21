@@ -1,4 +1,7 @@
 import App from '@/views/App/Index.vue';
+import store from '@/store';
+
+const isAuth = store.getters['auth/isAuth'];
 
 const DashboardRoute = {
   path: 'dashboard',
@@ -24,7 +27,12 @@ export default {
     DashboardRoute,
     AppNotFound,
   ],
-  // beforeEnter: (to: any, from: any, next: any) => {
-  //   // Todo
-  // },
+  beforeEnter: (to: any, from: any, next: any) => {
+    // Todo
+    if (isAuth()) {
+      next();
+    } else {
+      next('/login');
+    }
+  },
 };

@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import './plugins/vuetify';
 import i18n from './plugins/i18n';
+import '@/plugins/veevalidate';
 import App from './App.vue';
 import router from './router/index';
 import store from './store/index';
