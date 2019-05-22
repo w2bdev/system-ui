@@ -9,7 +9,7 @@ Vue.use(VueI18n);
 Vue.mixin({
   methods: {
     translate(this: any, key: string) {
-      return this.$t(key);
+      return this.$root.$t(key);
     },
   },
 });

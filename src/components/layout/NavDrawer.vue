@@ -2,7 +2,7 @@
   <v-navigation-drawer app clipped width="250" v-model="isOpen">
     <v-list dense class="pt-0 text-capitalize">
       <template v-for="item in items">
-        <v-list-tile :key="item.title" v-if="item.meta && item.meta.displayMenu" @click="">
+        <v-list-tile :key="item.title" v-if="item.meta && item.meta.showMenu" @click="goTo(item.path)">
           <v-list-tile-action v-if="item.meta && item.meta.icon">
             <v-icon>{{ item.meta.icon }}</v-icon>
           </v-list-tile-action>
@@ -46,6 +46,9 @@ export default class extends Vue {
     this.items = utils.helper.getAppMenu(routes, 'app');
   }
 
+  private goTo(path: string) {
+    this.$router.push(path);
+  }
   private created() {
     this.getMenu();
   }

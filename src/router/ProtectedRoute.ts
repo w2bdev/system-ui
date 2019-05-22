@@ -7,7 +7,7 @@ const DashboardRoute = {
   path: 'dashboard',
   name: 'home',
   meta: {
-    displayMenu: true,
+    showMenu: true,
     icon: 'mdi-apps',
   },
   component: () => import(/* webpackChunkName: "todo" */ '@/views/App/Dashboard.vue'),
