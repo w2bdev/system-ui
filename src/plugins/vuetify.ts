@@ -13,7 +13,12 @@ Vue.use(Vuetify, {
     warning: '#FFC107',
   },
   options: {
-    customProperties: true,
+    customProperties: false,
+    minifyTheme: (css: any) => {
+      return process.env.NODE_ENV === 'production'
+        ? css.replace(/[\s|\r\n|\r|\n]/g, '')
+        : css;
+    },
   },
   iconfont: 'mdi',
 });
