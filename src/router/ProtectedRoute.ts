@@ -12,6 +12,16 @@ const DashboardRoute = {
   },
   component: () => import(/* webpackChunkName: "todo" */ '@/views/App/Dashboard.vue'),
 };
+
+const ChartRoute = {
+  path: 'chart',
+  name: 'chart',
+  meta: {
+    showMenu: true,
+    icon: 'mdi-apps',
+  },
+  component: () => import(/* webpackChunkName: "todo" */ '@/views/App/Chart.vue'),
+};
 const AppNotFound = {
   path: '/app/*',
   name: 'AppNotFound',
@@ -25,6 +35,7 @@ export default {
   component: App,
   children: [
     DashboardRoute,
+    ChartRoute,
     AppNotFound,
   ],
   beforeEnter: (to: any, from: any, next: any) => {
