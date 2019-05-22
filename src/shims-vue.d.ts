@@ -5,3 +5,4 @@ declare module '*.vue' {
 
 declare module 'vuetify/*';
 declare module 'vue-tree-chart';
+declare module 'v-charts';

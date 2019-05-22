@@ -1,6 +1,7 @@
 import 'babel-polyfill';
 import Vue from 'vue';
 import './plugins/vuetify';
+import './plugins/vcharts';
 import i18n from './plugins/i18n';
 import '@/plugins/veevalidate';
 import App from './App.vue';
