@@ -11,15 +11,15 @@
     <!-- <v-btn icon>
         <v-icon>mdi-bell-outline</v-icon>
     </v-btn>-->
-    <v-btn icon>
+    <!-- <v-btn icon>
       <v-icon>mdi-help-circle-outline</v-icon>
+    </v-btn> -->
+    <v-btn icon @click.stop="setDarkMode(!stateApp.darkMode)">
+      <v-icon>mdi-theme-light-dark</v-icon>
     </v-btn>
-    <v-btn icon>
-      <v-icon>mdi-settings-outline</v-icon>
-    </v-btn>
-    <v-btn icon>
+    <!-- <v-btn icon>
       <v-icon>mdi-apps</v-icon>
-    </v-btn>
+    </v-btn> -->
     <LanguageButton :is-floating="true" />
     <UserMenu />
   </v-toolbar>
@@ -42,5 +42,17 @@ import { IApp } from '@/interfaces';
 export default class extends Vue {
   @State('app') private stateApp!: IApp;
   @Action('app/setMenu') private setMenu: any;
+  @Action('app/setDarkMode') private setDarkMode: any;
+
+  private $vuetify: any;
+
+  private forceOpenMenu() {
+    if (this.$vuetify.breakpoint.mdAndUp) {
+      this.setMenu(true);
+    }
+  }
+  private created() {
+    this.forceOpenMenu();
+  }
 }
 </script>

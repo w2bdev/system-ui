@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app :dark="appState.darkMode">
     <Header />
     <NavDrawer />
     <v-content>
@@ -10,8 +10,10 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import { State } from 'vuex-class';
 import Header from '@/components/layout/Header.vue';
 import NavDrawer from '@/components/layout/NavDrawer.vue';
+import { IApp } from '@/interfaces';
 
 @Component({
   components: {
@@ -20,6 +22,6 @@ import NavDrawer from '@/components/layout/NavDrawer.vue';
   },
 })
 export default class extends Vue {
-  private drawer: boolean = true;
+  @State('app') private appState!: IApp;
 }
 </script>

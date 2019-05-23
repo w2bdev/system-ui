@@ -1,18 +1,21 @@
 <template>
   <div class="">
-    <ve-line :data="chartData" theme="dark"></ve-line>
+    <ve-line class="pa-5" :data="chartData" :theme-name="stateApp.darkMode ? 'dark' : 'light'" ></ve-line>
   </div>
 </template>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import { State } from 'vuex-class';
 
 import utils from '@/utils/index';
 import _ from 'lodash';
+import { IApp } from '@/interfaces';
 
 @Component({
   components: {},
 })
 export default class extends Vue {
+   @State('app') private stateApp!: IApp;
   private drawer: boolean = true;
   private chartData: any = {
     columns: ['date', 'cost', 'profit', 'growthRate', 'people'],
